@@ -1,7 +1,6 @@
 #Pendulum energy function without initial torque  
 import math
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import pendulum_energy
 import numpy as np
 
@@ -22,18 +21,6 @@ n = 100
 pendulumCalc = np.vectorize(pendulum_energy.pendulum_energy)
 V_values = pendulumCalc(θ_grid, ω_grid, m, L, g)
 
-
-# # Number of points and ranges
-# n = 100
-# θ_range = range(int(-3*math.pi), int(3*math.pi), n)
-# ω_range = range(-10, 10, n)
-
-# # Creating a grid of theta and omega values and calculating energy. 
-# #TODO optimize with numpy
-# V_values = []
-# for θ in θ_range:
-#     for ω in ω_range:
-#         V_values.append(pendulum_energy.pendulum_energy(θ, ω, m, L, g))
 
 # 3D Plotting
 # adjusted_angle = sol[1, :] .- θ₁
