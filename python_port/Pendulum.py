@@ -1,6 +1,6 @@
 import math
 
-# modifies arguments!
+# modifies its arguments in original julia code
 def Pendulum(du, u, p, t):
     a, T , g, L = p
     du[1] = u[2]                  # u[1] is θ
