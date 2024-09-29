@@ -45,7 +45,7 @@ def generate_pendulum_energy_t(mass, length, grid_size, torque):
 
     # Show color bar
     fig.colorbar(surf)
-    fig.canvas.set_window_title(f"Pendulum Energy (mass = {m}, length = {L}, grid_size = {n})")
+    fig.canvas.manager.set_window_title(f"Pendulum Energy (mass = {m}, length = {L}, grid_size = {n})")
 
     # Display plot
     plt.show()

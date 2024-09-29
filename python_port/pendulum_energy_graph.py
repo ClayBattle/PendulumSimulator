@@ -1,4 +1,4 @@
-import python_port.Pendulum_energy_torque as Pendulum_energy_torque
+import Pendulum_energy_torque
 import Pendulum_energy_no_torque
 
 def main():
@@ -14,11 +14,10 @@ def main():
         mass = float(mass) if mass else 1
         length = float(length) if length else 9.8
         grid_size = int(grid_size) if grid_size else 100
-        if(has_torque.strip().lower() == "n"):
-            has_torque == False
+        if(has_torque and has_torque.strip().lower() == "n"):
+            has_torque = False
         else:
-            has_torque == True
-
+            has_torque = True
 
         if(has_torque):
             torque_amount = input("Enter the torque [Default: .5]: ")
