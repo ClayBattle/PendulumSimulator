@@ -1,7 +1,14 @@
-#Pendulum energy function without initial torque  
+# Import packages
+import Pkg
+Pkg.add("Plots")
+Pkg.add("PlotlyBase")
+Pkg.add("PlotlyKaleido")
+
+# Include the pendulum energy function
+include("pendulum_energy.jl")
 
 using Plots
-plotly()  # This line ensures that the backend is used
+plotly()  # Set the plotting backend to Plotly
 
 # Parameters
 m = 1
@@ -14,9 +21,11 @@ n = 100
 ω_range = range(-10, stop=10, length=n)
 
 # Creating a grid of theta and omega values and calculating energy
-V_values = [pendulum_energy(θ, ω, m, L, g) for θ in θ_range ω in ω_range]
+V_values = [pendulum_energy(θ, ω, m, L, g) for θ in θ_range, ω in ω_range]
+
+# Reshape the values into an n × n matrix for the surface plot
+V_matrix = reshape(V_values, n, n)
 
 # 3D Plotting
-# adjusted_angle = sol[1, :] .- θ₁
-surface(ω_range, θ_range, V_values, title="Pendulum Energy", xlabel="ω (rad/s)", ylabel="θ (rad)", zlabel="Energy (Joules)")
-
+plot = surface(ω_range, θ_range, V_matrix, title="Pendulum Energy", xlabel="ω (rad/s)", ylabel="θ (rad)", zlabel="Energy (Joules)")
+display(plot)
