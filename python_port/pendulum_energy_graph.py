@@ -1,4 +1,4 @@
-import Pen_energy_withT
+import python_port.Pendulum_energy_torque as Pendulum_energy_torque
 import Pendulum_energy_no_torque
 
 def main():
@@ -22,9 +22,9 @@ def main():
 
         if(has_torque):
             torque_amount = input("Enter the torque [Default: .5]: ")
-            torque = int(torque_amount) if torque_amount else .5
+            torque = float(torque_amount) if torque_amount else .5
 
-            Pen_energy_withT.generate_pendulum_energy_t(mass, length, grid_size, torque)
+            Pendulum_energy_torque.generate_pendulum_energy_t(mass, length, grid_size, torque)
         else:
             Pendulum_energy_no_torque.generate_pendulum_energy_no_t(mass, length, grid_size)
         
