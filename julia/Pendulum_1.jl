@@ -1,3 +1,5 @@
+# import Pkg; Pkg.add("DifferentialEquations")
+# Pkg.add("Plots")
 using DifferentialEquations
 using Plots
 
@@ -36,3 +38,4 @@ plt2 = plot(sol.t, sol[2, :], xlabel="Time (s)", ylabel="Angular Velocity (rad/s
 plt = plot(plt1, plt2, layout=(2, 1))
 
 display(plt)
+readline()
