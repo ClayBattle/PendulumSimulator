@@ -27,11 +27,10 @@ stable_points = [(i, j) for i in 1:n, j in 1:n if results[i, j] == 1]
 # Convert index to angle and angular velocity
 stable_points_xy = [(θ_range[i], ω_range[j]) for (i, j) in stable_points]
 
-scatter(stable_points_xy, markershape=:circle, markercolor=:green, markerstrokewidth=0, 
+display(scatter(stable_points_xy, markershape=:circle, markercolor=:green, markerstrokewidth=0, 
 label="Stable", xlabel="Angle Φ-Φ₁", ylabel="Frequency ω", 
-xlims=(-pi, pi), ylims=(-20, 20), size=(800, 800), markersize=1)
-
-
+xlims=(-pi, pi), ylims=(-20, 20), size=(800, 800), markersize=1))
+readline()
 # Save the results matrix to a CSV file
 #output_filename = "n_2000.csv"
 #writedlm(output_filename, results, ',')

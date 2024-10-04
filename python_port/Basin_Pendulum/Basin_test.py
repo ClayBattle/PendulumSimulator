@@ -4,7 +4,9 @@ import Pen_stable_check
 
 # Assuming the is_stable function from the previous example is defined
 
-n = 50 #originally 200
+#warning, this test runs exceedingly slow
+
+n = 200 #originally 200
 theta_range = np.linspace(-np.pi, np.pi, n)
 omega_range = np.linspace(-20, 20, n)
 

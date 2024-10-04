@@ -1,3 +1,4 @@
+#WARNING! THIS FILE APPEARS TO BE BROKEN!
 using Plots
 using DelimitedFiles
 
@@ -11,6 +12,8 @@ n = size(results, 1)
 ω_range = range(-20, 20, length=n)
 
 
-scatter(results, markershape=:circle, markercolor=:green, markerstrokewidth=0, 
+
+display(scatter(results, markershape=:circle, markercolor=:green, markerstrokewidth=0, 
 label="Stable", xlabel="Angle Φ-Φ₁", ylabel="Frequency ω", 
-xlims=(-pi, pi), ylims=(-20, 20), markersize=1)
+xlims=(-pi, pi), ylims=(-20, 20), markersize=1))
+readline()
