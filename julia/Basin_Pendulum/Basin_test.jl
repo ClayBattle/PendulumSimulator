@@ -20,6 +20,7 @@ stable_points = [(i, j) for i in 1:n, j in 1:n if results[i, j] == 1]
 # Convert index to angle and angular velocity
 stable_points_xy = [(θ_range[i], ω_range[j]) for (i, j) in stable_points]
 
-scatter(stable_points_xy, markershape=:circle, markercolor=:green, markerstrokewidth=0, 
+display(scatter(stable_points_xy, markershape=:circle, markercolor=:green, markerstrokewidth=0, 
 label="Stable", xlabel="Initial Angle (rad)", ylabel="Initial Angular Velocity (rad/s)", 
-xlims=(-pi, pi), ylims=(-20, 20), markersize=2)
+xlims=(-pi, pi), ylims=(-20, 20), markersize=2))
+readline()

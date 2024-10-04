@@ -1,4 +1,5 @@
 using DifferentialEquations, Plots
+import Pkg; Pkg.add("PlotlyBase")
 plotly()
 
 function Pendulum!(du, u, p, t)
