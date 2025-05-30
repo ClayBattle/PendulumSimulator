@@ -1,7 +1,0 @@
-Can't think of a particular focus, but start with simulations of torqued simple pendulum, and plot phase trajectories (angle vs velocity, I think) under different parameters.
-
-I think to start with, just a single parameter, the torque. So each torque setting would result in a single line. If it is stable, the line will join itself, so be a closed loop of some kind. If unstable, the line would just go off the edge.
-
-There is some Julia code that does this, I believe. You essentially port that to Python to begin with.
-
-Of course, write the plotting code to be flexible, so can easily change the parameter range, etc.
