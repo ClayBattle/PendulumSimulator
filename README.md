@@ -17,7 +17,7 @@ Within the python_port directory is the Basin_Pendulum directory, which contains
 * Pendulum_1.py: Same as previous Pendulum_1.py
 * Pen_stable_check.py: Contains functions to numerically check if a given pendulum initial condition is stable (i.e.  small perturbations around that state won’t cause the motion to diverge uncontrollably).
 * Basin_test.py: Brute-force script to evaluate and plot the stability of a grid of pendulum initial conditions (slow, for testing).
-* Basin_parallel.py/Basin_parallel_attempt_2.py: my attempt to speed up Basin_test with parallelizion. 
+* Basin_parallel.py/Basin_parallel_attempt_2.py: my attempt to speed up Basin_test with parallelizion. Unfortunately, the code is still very slow.
 * Plot_csv.py: Loads a CSV file of stability results (from Basin_test, or a Basin_parallel run) and generates a scatter plot of stable points in phase space. This visualuzes the stability of the system.
 
 
